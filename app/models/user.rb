@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
   has_many :properties
   has_many :bookings
-  has_manny :payments, through: :bookings
+  has_many :payments, through: :bookings
 
   validates :email, presence: true, uniqueness: true
 end
