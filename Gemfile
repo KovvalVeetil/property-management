@@ -53,6 +53,9 @@ gem 'bcrypt', '~> 3.1.7'
 #Payment
 gem 'stripe'
 gem 'stripe-ruby-mock', :require => 'stripe_mock'
+# Gemfile
+gem 'rails-controller-testing'
+
 
 
 # Use Redis adapter to run Action Cable in production

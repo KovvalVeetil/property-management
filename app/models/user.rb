@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_secure_password
+ # has_secure_password
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -12,5 +12,5 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :payments, through: :bookings
 
-  validates :email, presence: true, uniqueness: true
+  #validates :email, presence: true, uniqueness: true
 end
