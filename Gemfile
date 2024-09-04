@@ -52,6 +52,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 #Payment
 gem 'stripe'
+gem 'stripe-ruby-mock', :require => 'stripe_mock'
 
 
 # Use Redis adapter to run Action Cable in production
@@ -88,8 +89,16 @@ group :development do
   # gem "spring"
 end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
+# Gemfile
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug' # Optional, for additional debugging features
 end
+
+
+# group :test do
+#   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+#   gem "capybara"
+#   gem "selenium-webdriver"
+# end
