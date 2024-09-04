@@ -26,6 +26,28 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Authentication and Authorization
+gem 'devise'
+gem 'pundit'
+
+# Payment Integration
+gem 'stripe'
+
+# File Storage
+gem 'aws-sdk-s3', require: false
+
+# Geocoding and Maps
+gem 'geocoder'
+
+# Background Jobs
+gem 'sidekiq'
+
+# Testing
+gem 'rspec-rails', group: [:development, :test]
+gem 'factory_bot_rails', group: [:development, :test]
+gem 'capybara', group: [:development, :test]
+
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
