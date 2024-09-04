@@ -1,5 +1,5 @@
 class Payment < ApplicationRecord
   belongs_to :booking
 
-  validates :amount, :status, presence: true
+  validates :amount, :booking_id, :status, presence: true
 end
