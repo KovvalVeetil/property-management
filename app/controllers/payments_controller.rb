@@ -4,7 +4,16 @@ class PaymentsController < ApplicationController
     def create
       @payment = Payment.new(payment_params)
       if @payment.save
-        render json: @payment, status: :created
+        stripe_service = StripeService.new(@payment.amount)
+        charge = stripe_service.create_charge(params[:stripeToken])
+  
+        if charge.paid
+          @payment.update(status: 'completed')
+          render json: { success: true, charge: charge }, status: :created
+        else
+          @payment.update(status: 'failed')
+          render json: { error: 'Payment failed' }, status: :unprocessable_entity
+        end
       else
         render json: @payment.errors, status: :unprocessable_entity
       end

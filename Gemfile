@@ -50,6 +50,9 @@ gem 'capybara', group: [:development, :test]
 #Password
 gem 'bcrypt', '~> 3.1.7'
 
+#Payment
+gem 'stripe'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
