@@ -5,4 +5,5 @@ Rails.application.routes.draw do
 
   resources :users
   resources :properties
+  resources :bookings
 end
