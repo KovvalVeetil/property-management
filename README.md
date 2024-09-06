@@ -1,26 +1,49 @@
+# Real Estate Property Management Backend API
 
-# README
+This is the backend API for a Real Estate Property Management system built with Ruby on Rails. It handles user, property, booking, and payment functionalities, including integration with Stripe for payment processing.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This project provides the backend services for managing users, properties, bookings, and payments in a Real Estate Property Management system. It integrates with Stripe to handle payment processing, including mock testing with stripe-ruby-mock for development and test environments.
 
-* Ruby version
+## Features
 
-* System dependencies
+- User Management: Register, authenticate, and manage users.
+- Property Management: Create, update, and delete property listings.
+- Booking Management: Handle booking requests and manage booking statuses.
+- Payment Processing: Integrate with Stripe to process payments securely.
+- Error Handling: Robust error handling for Stripe API interactions, including card errors, authentication errors, and network issues.
+- Testing: Comprehensive RSpec tests with Stripe mock to simulate payment scenarios.
 
-* Configuration
+## Technologies used
+- Ruby on Rails: Backend framework
+- PostgreSQL: Database
+- Stripe: Payment processing
+- RSpec: Testing framework
+- stripe-ruby-mock: Stripe API mocking for testing
+- Pry: Debugging tool
 
-* Database creation
+## API Endpoints
 
-* Database initialization
+```bash
+Users
+- POST /users: Register a new user
+GET /users/
+  Retrieve a specific user
 
-* How to run the test suite
+Properties
+- POST /properties: Create a new property
+- GET /properties/
+  Retrieve a specific property
 
-* Services (job queues, cache servers, search engines, etc.)
+Bookings
+- POST /bookings: Create a new booking
+- GET /bookings/
+  Retrieve a specific booking
 
-* Deployment instructions
+Payments
+- POST /payments: Process a new payment
+- GET /payments/
+  Retrieve a specific payment
 
-* ...
-
+```
